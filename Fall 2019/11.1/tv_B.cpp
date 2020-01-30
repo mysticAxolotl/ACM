@@ -4,6 +4,7 @@
 #include <string>
 using namespace std;
 
+// sftp bah128@pausch.cs.uakron.edu
 int main()
 {
     int queries, length, shows, req, min;
