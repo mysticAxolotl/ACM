@@ -1,5 +1,6 @@
 // B. Array
 // https://codeforces.com/contest/224/problem/B
+// Accepted 
 
 #include <iostream>
 #include <map>
@@ -32,18 +33,16 @@ int main(){
         return 0;
     }
 
-    int j = 0;
     for(; i < elem && unique.size() != leng; ++i )
-    {
         ++unique[ arr[i] ];
-        if( unique[ arr[j] ] > 1 )
-        {
-            --unique[ arr[j] ];
-            ++j;
-        }
-    }
     if( unique.size() == leng )
+    {
+        int j = 0;
+        for(; unique[ arr[j] ] > 1; ++j )
+            --unique[ arr[j] ];
+            
         cout << ++j << " " << i << '\n';
+    }
     else
         cout << "-1 -1\n";   
     return 0;
