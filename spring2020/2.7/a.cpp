@@ -16,38 +16,21 @@ int main()
     for(; tests; --tests )
     {
         cin >> length >> num;
-        if( length == 1 )
-        {
-            cout << "-1\n";
-            continue;
-        }
- 
-        short odds = 0;
-        auto j = num.begin(), k = num.begin();
-        for( auto i = num.begin(); i != num.end(); ++i )
-        {
-            if( ( *i - '0' ) % 2 )
-            {
-                k = j;
-                j = i;
-                ++odds;
-            }
-        }
-
-        if( odds < 2 )
-        {
-            cout << "-1\n";
-            continue;
-        }
-
         auto i = num.begin();
-        for(; *i == '0' && i != num.end(); ++i );
+        for(; !(( *i - '0' ) % 2 ) && i != num.end(); ++i );
         if( i == num.end() )
-            cout << ( odds % 2 ? num.substr( 0, k - num.begin() + 1 ) : 
-                                 num.substr( 0, j - num.begin() + 1 ) ) << '\n';
-        else
-            cout << ( odds % 2 ? num.substr( i - num.begin(), k - i + 1 ) : 
-                                 num.substr( i - num.begin(), j - i + 1 ) ) << '\n';
+        {
+            cout << "-1\n";
+            continue;
+        }
+        auto j = i + 1;
+        for(; !(( *j - '0' ) % 2 )  && j != num.end(); ++j );
+        if( j == num.end() )
+        {
+            cout << "-1\n";
+            continue;
+        }
+        cout << *i << *j << '\n';
     }
     return 0;
 }
