@@ -14,7 +14,7 @@ int main()
     {
         cin >> num;
         int sum = 0, steps = 0;
-        for( int i = num, hold; i; --i )
+        for( int hold; num; --num )
         {
             cin >> hold;
             if( hold == 0 )
@@ -25,9 +25,7 @@ int main()
             else
                 sum += hold;
         }
-
         cout << ( sum != 0 ? steps : steps + 1 ) << '\n';
     }
-
     return 0;
 }
