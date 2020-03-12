@@ -1,6 +1,11 @@
-using namespace::std;
+// A. CME
+// https://codeforces.com/contest/1241/problem/A
+// ACCEPTED
+
 #include <iostream>
 #include <string>
+
+using namespace std;
 
 int main()
 {

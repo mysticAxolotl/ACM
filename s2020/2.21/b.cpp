@@ -35,22 +35,18 @@ int main()
     }
 
     string pal = "";
-    ++num;
     for( auto i = words.begin(); i != words.end(); ++i )
     {
         if( i->second == 2 )
         {
             pal += i->first;
-            num += 2;
             string hold = i->first;
             reverse( hold.begin(), hold.end() );
             words.erase( hold );
         }
     }
     
-    if( bigP.length() != 0 )
-        ++num;
-    cout << num * len << '\n'
+    cout << pal.length() * 2 + bigP.length() << '\n'
          << pal << bigP;
     reverse( pal.begin(), pal.end() );
     cout << pal << '\n';

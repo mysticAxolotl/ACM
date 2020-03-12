@@ -1,5 +1,10 @@
+// A. Good ol' Numbers Coloring
+// https://codeforces.com/contest/1245/problem/A
+// ACCEPTED
+
 #include <iostream>
 #include <algorithm>
+
 using namespace std;
 
 int main()

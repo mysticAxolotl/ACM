@@ -1,4 +1,9 @@
+// A. Forgetting Things
+// https://codeforces.com/contest/1247/problem/A
+// ACCEPTED
+
 #include <iostream>
+
 using namespace std;
 
 int main()

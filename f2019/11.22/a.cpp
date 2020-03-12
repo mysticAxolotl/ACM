@@ -1,7 +1,12 @@
+// A. Changing Volume
+// https://codeforces.com/contest/1255/problem/A
+// ACCEPTED
+
 #include <iostream>
 #include <cmath>
 #include <string>
-using namespace::std;
+
+using namespace std;
 
 int main()
 {

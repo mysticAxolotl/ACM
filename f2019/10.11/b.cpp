@@ -1,7 +1,12 @@
-using namespace::std;
+// B. Strings Equalization
+// https://codeforces.com/contest/1293/problem/A
+// ACCEPTED
+
 #include <iostream>
 #include <string>
 #include <map>
+
+using namespace std;
 
 int main()
 {
@@ -16,7 +21,7 @@ int main()
         itr2 = sec.begin();
         bool flag;
         
-        for(flag = 1; *itr1 && flag; ++itr1, itr2 = sec.begin() )
+        for( flag = 1; *itr1 && flag; ++itr1, itr2 = sec.begin() )
         {
             for(; *itr2 && flag; ++itr2 )
             {
